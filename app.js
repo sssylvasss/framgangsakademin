@@ -25,9 +25,10 @@ fetch(`https://fa-frontend-code-test.herokuapp.com/getdata`)
 		<video class="header-video" autoPlay>
 			<source src="${ video }" type="video/mp4">
 		</video>
+	<div class="header-text-wrapper">
 		<h1 class="header-title">${ title }</h1>
 		<p class="header-text">${ paragraph }</p>
-	
+	</div>
 	</div>
 	`
 
