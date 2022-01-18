@@ -1,4 +1,64 @@
- 
+
 * {
   box-sizing: border-box;
+}
+
+body {
+  width: 0 auto;
+  background-color: #e9e9ea;
+  font-family: 'Roboto', sans-serif;
+  color: #e9e9ea;
+}
+
+.top-bar{
+  width: 100vw;
+  height: 50px;
+  background-color: #a16c4c;
+}
+
+.header-wrapper{
+  width: 100vw;
+  background-color: #222428;
+}
+
+.header-title {
+  padding: 10px 10px 0 10px;
+}
+
+.header-text{
+  padding: 0 10px 50px 10px;
+}
+
+.header-video{
+  width: 100vw;
+}
+
+.expertise-container{
+  
+}
+
+.profile-card{
+  background-color: #222428;
+  width: 100vw;
+  padding-bottom: 20px;
+  margin-top: 30px;
+}
+
+.profil-image{
+  width: 100vw;
+}
+
+.profile-text-wrapper{
+  padding: 10px;
+}
+
+.expertise-text{
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.name-text{
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 5px;
 }

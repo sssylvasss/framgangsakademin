@@ -7,7 +7,6 @@ fetch(`https://fa-frontend-code-test.herokuapp.com/getdata`)
 	.then((response) => {
 		return response.json();
 	})
-
 	.catch(error => {
 		console.log(error)
 	})
@@ -22,18 +21,25 @@ fetch(`https://fa-frontend-code-test.herokuapp.com/getdata`)
     
 
 	headerContainer.innerHTML += `
-	<h1>${ title }</h1>
-	<p>${ paragraph }</p>
-	<video width="320" height="240" autoPlay>
-  <source src="${ video }" type="video/mp4">
-	</video>
+	<div class="header-wrapper">
+		<video class="header-video" autoPlay>
+			<source src="${ video }" type="video/mp4">
+		</video>
+		<h1 class="header-title">${ title }</h1>
+		<p class="header-text">${ paragraph }</p>
+	
+	</div>
 	`
 
 	profiles.forEach((profile) => {
 		expertiseContainer.innerHTML += `
-		<img src="${ profile.imgUrl }">
-		<p>${ profile.firstName } ${ profile.lastName }</p>
-		<p>${ profile.expertise }</p>
+		<div class="profile-card">
+			<img class="profil-image" src="${ profile.imgUrl }">
+			<div class="profile-text-wrapper">
+				<h2 class="name-text">${ profile.firstName } ${ profile.lastName }</h2>
+				<p class="expertise-text">${ profile.expertise }</p>
+			</div>
+		</div>
 		`
 	})
 
