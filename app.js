@@ -17,6 +17,7 @@ fetch(`https://fa-frontend-code-test.herokuapp.com/getdata`).then((response) => 
 		const video = json.data.heroBanner.videoUrl
 		const profiles = json.data.profiles
 
+
 	headerContainer.innerHTML += `
 		<div class="header-wrapper">
 			<video class="header-video" autoPlay loop>
@@ -30,15 +31,19 @@ fetch(`https://fa-frontend-code-test.herokuapp.com/getdata`).then((response) => 
 	`	
 
 	profiles.forEach((profile) => {
-		expertiseContainer.innerHTML += `
-		<div class="profile-card">
-			<img class="profil-image" src="${ profile.imgUrl === "error" || profile.imgUrl === null ? './assets/avatar.png' : profile.imgUrl }" alt="Profile image">
-			<div class="profile-text-wrapper">
-				<h2 class="name-text">${ profile.firstName } ${ profile.lastName }</h2>
-				<p class="expertise-text">${ profile.expertise }</p>
+		if (!profiles) {
+			console.log('No profiles added')
+		} else {
+			expertiseContainer.innerHTML += `
+			<div class="profile-card">
+				<img class="profil-image" src="${ profile.imgUrl === "error" || profile.imgUrl === null ? './assets/avatar.png' : profile.imgUrl }" alt="Profile image">
+				<div class="profile-text-wrapper">
+					<h2 class="name-text">${ profile.firstName } ${ profile.lastName }</h2>
+					<p class="expertise-text">${ profile.expertise }</p>
+				</div>
 			</div>
-		</div>
-		`
+			`
+		}
 	})
 
 });
