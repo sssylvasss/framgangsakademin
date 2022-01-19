@@ -7,9 +7,7 @@ fetch(`https://fa-frontend-code-test.herokuapp.com/getdata`).then((response) => 
   } else {
     throw new Error('Something went wrong');
   } 
-}).catch((error) => {
-		console.error(error)
-	})
+})
 
 .then((json) => {
 		const title = json.data.heroBanner.title
@@ -45,7 +43,11 @@ fetch(`https://fa-frontend-code-test.herokuapp.com/getdata`).then((response) => 
 			`
 		}
 	})
-
-});
+	
+})
+	.catch((error) => {
+			console.error(error)
+		});
+		
 
 
