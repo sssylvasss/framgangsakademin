@@ -1,4 +1,4 @@
-# framstegsakademin
+# framgångsakademin
 Frontend, Responsive, HTML, CSS och JavaScript. API fetch
 
 # Wiev site live
